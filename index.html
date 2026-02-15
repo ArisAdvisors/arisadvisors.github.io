@@ -1,130 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArisAdvisors | Data Engineering & Digital Solutions</title>
+    <title>Conde Coronado Tech Solutions</title>
     <style>
-        :root {
-            --primary: #0061ff;
-            --dark: #1e293b;
-            --light-bg: #ffffff;
-            --text-main: #334155;
-            --card-border: #e2e8f0;
-        }
-        body { 
-            font-family: 'Inter', -apple-system, sans-serif; 
-            margin: 0; color: var(--text-main); background-color: var(--light-bg); 
-            line-height: 1.6; 
-        }
+        :root { --primary: #2c3e50; --accent: #2980b9; --bg: #f4f7f6; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background: var(--bg); color: #333; }
         
-        /* Selector de Idioma */
-        .lang-switch { position: absolute; top: 20px; right: 20px; z-index: 100; }
-        .lang-btn { 
-            background: #f1f5f9; border: 1px solid var(--card-border); 
-            padding: 8px 16px; border-radius: 25px; cursor: pointer; 
-            font-weight: 600; color: var(--dark); font-size: 0.85rem;
-        }
-        .lang-btn:hover { background: var(--primary); color: white; }
-
-        header { padding: 100px 20px; text-align: center; background: radial-gradient(circle at top, #f8faff 0%, #ffffff 100%); }
-        .logo-text { font-size: 3.5rem; font-weight: 800; color: var(--dark); letter-spacing: -2px; margin: 0; }
-        .logo-text span { color: var(--primary); }
-        .slogan { font-size: 1.25rem; color: #64748b; max-width: 750px; margin: 25px auto; }
-
-        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        header { background: white; padding: 40px 20px; text-align: center; border-bottom: 3px solid var(--primary); }
+        h1 { margin: 0; letter-spacing: 6px; color: var(--primary); font-size: 2.5em; }
+        .subtitle { font-weight: 300; color: var(--accent); margin-top: 10px; letter-spacing: 2px; }
         
-        .card { 
-            padding: 45px; border-radius: 16px; border: 1px solid var(--card-border); 
-            background: white; transition: all 0.3s ease;
-        }
-        .card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .card h3 { color: var(--dark); margin-top: 0; font-size: 1.6rem; }
-        
-        .badge { 
-            display: inline-block; padding: 5px 14px; background: #eff6ff; 
-            color: var(--primary); border-radius: 30px; font-size: 0.75rem; 
-            font-weight: 700; margin-bottom: 20px; text-transform: uppercase;
-        }
+        nav { margin: 20px 0; }
+        nav a { text-decoration: none; color: var(--primary); font-weight: bold; margin: 0 15px; transition: 0.3s; }
+        nav a:hover { color: var(--accent); }
 
-        .cta-section { text-align: center; padding: 100px 20px; }
-        .btn { 
-            background: var(--primary); color: white; padding: 18px 40px; 
-            border-radius: 10px; text-decoration: none; font-weight: 600; 
-        }
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
         
-        footer { border-top: 1px solid var(--card-border); padding: 50px; text-align: center; color: #94a3b8; }
-
-        /* Lógica de visibilidad corregida */
-        .lang-es { display: none; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        
+        .card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--accent); transition: transform 0.3s; }
+        .card:hover { transform: translateY(-10px); }
+        .card h3 { margin-top: 0; color: var(--primary); }
+        
+        .footer-legal { background: #eee; padding: 40px 20px; text-align: center; margin-top: 60px; font-size: 0.85em; color: #666; }
+        button { background: var(--primary); color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 4px; }
     </style>
 </head>
 <body>
 
-<div class="lang-switch">
-    <button class="lang-btn" onclick="toggleLang()">Español / English</button>
-</div>
-
 <header>
-    <div class="logo-text">Aris<span>Advisors</span></div>
-    <div class="slogan lang-en">Next-generation data infrastructure. We optimize, secure, and scale your most valuable assets.</div>
-    <div class="slogan lang-es">Infraestructura de datos de próxima generación. Optimizamos, protegemos y escalamos sus activos más valiosos.</div>
+    <h1>CONDE & CORONADO</h1>
+    <div class="subtitle">TECH SOLUTIONS</div>
+    <nav>
+        <a href="#home">HOME</a> | <a href="#lab">THE LAB</a>
+    </nav>
+    <button onclick="toggleLang()">ESPAÑOL / ENGLISH</button>
 </header>
 
 <div class="container">
-    <div class="grid">
-        <div class="card">
-            <div class="badge lang-en">Performance</div>
-            <div class="badge lang-es">Rendimiento</div>
-            <h3 class="lang-en">SQL Engineering</h3>
-            <h3 class="lang-es">Ingeniería SQL</h3>
-            <p class="lang-en">Advanced query optimization and database architectural design for high-concurrency environments.</p>
-            <p class="lang-es">Optimización avanzada de consultas y diseño de arquitectura de bases de datos para entornos de alta concurrencia.</p>
-        </div>
-
-        <div class="card">
-            <div class="badge lang-en">Security</div>
-            <div class="badge lang-es">Seguridad</div>
-            <h3 class="lang-en">Compliance & Auditing</h3>
-            <h3 class="lang-es">Cumplimiento y Auditoría</h3>
-            <p class="lang-en">End-to-end data encryption strategy and regulatory compliance oversight (GDPR, HIPAA, SOC2).</p>
-            <p class="lang-es">Estrategia de cifrado de datos de extremo a extremo y supervisión de cumplimiento normativo internacional.</p>
-        </div>
-
-        <div class="card">
-            <div class="badge lang-en">Solutions</div>
-            <div class="badge lang-es">Soluciones</div>
-            <h3 class="lang-en">Digital Infrastructure</h3>
-            <h3 class="lang-es">Infraestructura Digital</h3>
-            <p class="lang-en">Professional branding, automated business documentation, and strategic digital presence for growing enterprises.</p>
-            <p class="lang-es">Identidad corporativa profesional, automatización de documentos comerciales y presencia digital estratégica para empresas.</p>
-        </div>
+    <div class="lang-en">
+        <h2 style="text-align:center;">Elite Engineering for Growing Businesses</h2>
+    </div>
+    <div class="lang-es" style="display:none;">
+        <h2 style="text-align:center;">Ingeniería de Élite para Empresas en Crecimiento</h2>
     </div>
 
-    <section class="cta-section">
-        <a href="mailto:arisadvisors@proton.me" class="btn lang-en">Schedule a Technical Briefing</a>
-        <a href="mailto:arisadvisors@proton.me" class="btn lang-es">Agendar Sesión Técnica</a>
-    </section>
+    <div class="grid">
+        <div class="card">
+            <div class="lang-en">
+                <h3>Data Architecture</h3>
+                <p>Robust SQL database design to ensure your business information is secure, organized, and ready for growth.</p>
+            </div>
+            <div class="lang-es" style="display:none;">
+                <h3>Arquitectura de Datos</h3>
+                <p>Diseño robusto de bases de datos SQL para asegurar que la información de su negocio esté segura, organizada y lista para crecer.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="lang-en">
+                <h3>AI & Automation</h3>
+                <p>Smart systems that process invoices and documents automatically, saving you hours of manual work every week.</p>
+            </div>
+            <div class="lang-es" style="display:none;">
+                <h3>IA & Automatización</h3>
+                <p>Sistemas inteligentes que procesan facturas y documentos automáticamente, ahorrándole horas de trabajo manual cada semana.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="lang-en">
+                <h3>Digital Solutions</h3>
+                <p>Custom technology infrastructure designed to solve the specific needs of SMEs and individual high-end clients.</p>
+            </div>
+            <div class="lang-es" style="display:none;">
+                <h3>Soluciones Digitales</h3>
+                <p>Infraestructura tecnológica a la medida, diseñada para resolver las necesidades específicas de PYMES y clientes individuales.</p>
+            </div>
+        </div>
+    </div>
 </div>
 
-<footer>
-    <div class="lang-en">&copy; 2026 ArisAdvisors. Engineered for Reliability.</div>
-    <div class="lang-es">&copy; 2026 ArisAdvisors. Ingeniería diseñada para la confiabilidad.</div>
+<footer class="footer-legal">
+    <p><strong>© 2026 Conde Coronado Tech Solutions</strong></p>
+    <div class="lang-en">
+        <p><strong>Confidentiality:</strong> This firm operates under strict non-disclosure protocols. All client data and infrastructure architectures are treated as Highly Confidential.</p>
+    </div>
+    <div class="lang-es" style="display:none;">
+        <p><strong>Confidencialidad:</strong> Esta firma opera bajo protocolos estrictos de confidencialidad. Todos los datos y arquitecturas de infraestructura son tratados como información Altamente Confidencial.</p>
+    </div>
 </footer>
 
 <script>
     function toggleLang() {
         const en = document.querySelectorAll('.lang-en');
         const es = document.querySelectorAll('.lang-es');
-        
-        if (en[0].style.display === 'none') {
-            en.forEach(el => el.style.display = 'block');
-            es.forEach(el => el.style.display = 'none');
-        } else {
-            en.forEach(el => el.style.display = 'none');
-            es.forEach(el => el.style.display = 'block');
-        }
+        en.forEach(el => el.style.display = (el.style.display === 'none' ? 'block' : 'none'));
+        es.forEach(el => el.style.display = (el.style.display === 'none' ? 'block' : 'none'));
     }
 </script>
 
