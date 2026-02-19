@@ -217,60 +217,67 @@
         </div>
     </section>
     <script>
-        const langData = {
-            es: {
-                subtitle: "ESTRATEGIA, INFRAESTRUCTURA & TECH COACHING",
-                hTitle: "Infraestructura TI para Sectores de Alta Criticidad.",
-                hDesc: "14 años asegurando la continuidad operativa en Banca, Energía y Manufactura.",
-                c1t: "Guías de Despliegue", c1d: "Manuales técnicos basados en estándares de alta disponibilidad para la apertura de sedes.", c1b: "VER RECURSOS",
-                c2t: "Gestión de Activos", c2d: "Estrategias de licenciamiento y automatización de mantenimiento preventivo y correctivo.", c2b: "CONSULTORÍA",
-                c3t: "Factibilidad TI", c3d: "Evaluación estratégica de infraestructura para la escalabilidad de sus operaciones.", c3b: "DIAGNÓSTICO",
-                cot: "Coaching de Español Técnico", 
-                cos: "Español Profesional para Líderes de TI.", 
-                cod: "Domine el español naturalizado necesario para dirigir equipos de infraestructura en Latinoamérica con un enfoque bilingüe corporativo.", 
-                cob: "RESERVAR SESIÓN",
-                foot: "<strong>CONDE & CORONADO | Excelencia en Operaciones TI</strong><br><br>&copy; 2026 CONDE & CORONADO. Todos los derechos reservados.<br>Las guías y recursos ofrecidos son herramientas de referencia basadas en mejores prácticas y deben adaptarse a cada entorno específico por profesionales calificados."
-            },
-            en: {
-                subtitle: "STRATEGY, INFRASTRUCTURE & TECH COACHING",
-                hTitle: "IT Infrastructure for High-Criticality Sectors.",
-                hDesc: "14 years ensuring operational continuity in Banking, Energy, and Manufacturing.",
-                c1t: "Deployment Guides", c1d: "Technical manuals based on high-availability standards for branch openings.", c1b: "VIEW RESOURCES",
-                c2t: "Asset Management", c2d: "Licensing strategies and automation for preventive and corrective maintenance.", c2b: "CONSULTING",
-                c3t: "IT Feasibility", c3d: "Strategic infrastructure evaluation for the scalability of your operations.", c3b: "DIAGNOSTIC",
-                cot: "Technical Spanish Coaching", 
-                cos: "Professional Spanish for IT Leaders.", 
-                cod: "Master the naturalized Spanish needed to lead infrastructure teams in Latin America with a corporate bilingual focus.", 
-                cob: "BOOK A SESSION",
-                foot: "<strong>CONDE & CORONADO | Excellence in IT Operations</strong><br><br>&copy; 2026 CONDE & CORONADO. All rights reserved.<br>The guides and resources offered are reference tools based on best practices and must be adapted to each specific environment by qualified professionals."
-            }
-        };
-
-        function changeLang(lang) {
-            document.getElementById('subtitle').innerText = langData[lang].subtitle;
-            document.getElementById('h-title').innerText = langData[lang].hTitle;
-            document.getElementById('h-desc').innerText = langData[lang].hDesc;
-            document.getElementById('c1-t').innerText = langData[lang].c1t;
-            document.getElementById('c1-d').innerText = langData[lang].c1d;
-            document.getElementById('c1-b').innerText = langData[lang].c1b;
-            document.getElementById('c2-t').innerText = langData[lang].c2t;
-            document.getElementById('c2-d').innerText = langData[lang].c2d;
-            document.getElementById('c2-b').innerText = langData[lang].c2b;
-            document.getElementById('c3-t').innerText = langData[lang].c3t;
-            document.getElementById('c3-d').innerText = langData[lang].c3d;
-            document.getElementById('c3-b').innerText = langData[lang].c3b;
-            document.getElementById('co-t').innerText = langData[lang].cot;
-            document.getElementById('co-s').innerText = langData[lang].cos;
-            document.getElementById('co-d').innerText = langData[lang].cod;
-            document.getElementById('co-b').innerText = langData[lang].cob;
-            document.getElementById('f-text').innerHTML = langData[lang].foot;
-
-            document.getElementById('btn-es').classList.remove('active');
-            document.getElementById('btn-en').classList.remove('active');
-            document.getElementById('btn-' + lang).classList.add('active');
+    const langData = {
+        es: {
+            subtitle: "ESTRATEGIA, INFRAESTRUCTURA & TECH COACHING",
+            hTitle: "Infraestructura TI para Sectores de Alta Criticidad.",
+            hDesc: "14 años asegurando la continuidad operativa en Banca, Energía y Manufactura.",
+            c1t: "Guías de Despliegue", c1d: "Manuales técnicos basados en estándares de alta disponibilidad para la apertura de sedes.", c1b: "VER RECURSOS",
+            c2t: "Gestión de Activos", c2d: "Estrategias de licenciamiento y automatización de mantenimiento preventivo y correctivo.", c2b: "CONSULTORÍA",
+            c3t: "Factibilidad TI", c3d: "Evaluación estratégica de infraestructura para la escalabilidad de sus operaciones.", c3b: "DIAGNÓSTICO",
+            cot: "Coaching de Español Técnico", 
+            cos: "Español Profesional para Líderes de TI.", 
+            cod: "Domine el español naturalizado necesario para dirigir equipos de infraestructura en Latinoamérica con un enfoque bilingüe corporativo.", 
+            cob: "RESERVAR SESIÓN",
+            // FOOTER COMPLETO EN ESPAÑOL
+            foot: "<strong>CONDE & CORONADO | Excelencia en Operaciones TI</strong><br><br>&copy; 2026 CONDE & CORONADO. Todos los derechos reservados.<br>Las guías y recursos ofrecidos son herramientas de referencia basadas en mejores prácticas y deben adaptarse a cada entorno específico por profesionales calificados."
+        },
+        en: {
+            subtitle: "STRATEGY, INFRASTRUCTURE & TECH COACHING",
+            hTitle: "IT Infrastructure for High-Criticality Sectors.",
+            hDesc: "14 years ensuring operational continuity in Banking, Energy, and Manufacturing.",
+            c1t: "Deployment Guides", c1d: "Technical manuals based on high-availability standards for branch openings.", c1b: "VIEW RESOURCES",
+            c2t: "Asset Management", c2d: "Licensing strategies and automation for preventive and corrective maintenance.", c2b: "CONSULTING",
+            c3t: "IT Feasibility", c3d: "Strategic infrastructure evaluation for the scalability of your operations.", c3b: "DIAGNOSTIC",
+            cot: "Technical Spanish Coaching", 
+            cos: "Professional Spanish for IT Leaders.", 
+            cod: "Master the naturalized Spanish needed to lead infrastructure teams in Latin America with a corporate bilingual focus.", 
+            cob: "BOOK A SESSION",
+            // FOOTER COMPLETO EN INGLÉS
+            foot: "<strong>CONDE & CORONADO | Excellence in IT Operations</strong><br><br>&copy; 2026 CONDE & CORONADO. All rights reserved.<br>The guides and resources offered are reference tools based on best practices and must be adapted to each specific environment by qualified professionals."
         }
+    };
 
-        window.onload = () => changeLang('es');
-    </script>
+    function changeLang(lang) {
+        // Esta función busca cada ID y le asigna su traducción correspondiente
+        document.getElementById('subtitle').innerText = langData[lang].subtitle;
+        document.getElementById('h-title').innerText = langData[lang].hTitle;
+        document.getElementById('h-desc').innerText = langData[lang].hDesc;
+        document.getElementById('c1-t').innerText = langData[lang].c1t;
+        document.getElementById('c1-d').innerText = langData[lang].c1d;
+        document.getElementById('c1-b').innerText = langData[lang].c1b;
+        document.getElementById('c2-t').innerText = langData[lang].c2t;
+        document.getElementById('c2-d').innerText = langData[lang].c2d;
+        document.getElementById('c2-b').innerText = langData[lang].c2b;
+        document.getElementById('c3-t').innerText = langData[lang].c3t;
+        document.getElementById('c3-d').innerText = langData[lang].c3d;
+        document.getElementById('c3-b').innerText = langData[lang].c3b;
+        document.getElementById('co-t').innerText = langData[lang].cot;
+        document.getElementById('co-s').innerText = langData[lang].cos;
+        document.getElementById('co-d').innerText = langData[lang].cod;
+        document.getElementById('co-b').innerText = langData[lang].cob;
+        
+        // Aquí es donde sucede la magia del footer bilingüe
+        document.getElementById('f-text').innerHTML = langData[lang].foot;
+
+        // Estética de los botones de idioma
+        document.getElementById('btn-es').classList.remove('active');
+        document.getElementById('btn-en').classList.remove('active');
+        document.getElementById('btn-' + lang).classList.add('active');
+    }
+
+    // Ejecutar al cargar la página
+    window.onload = () => changeLang('es');
+</script>
 </body>
 </html>
