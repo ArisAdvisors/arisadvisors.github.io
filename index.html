@@ -21,6 +21,25 @@
             line-height: 1.6;
         }
 
+        /* Barra de Idioma */
+        .lang-bar {
+            background: #0d161f;
+            padding: 10px 5%;
+            text-align: right;
+            font-size: 0.75em;
+            letter-spacing: 1px;
+        }
+
+        .lang-bar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .lang-bar a:hover { color: var(--accent); }
+
         header {
             background: var(--primary);
             color: white;
@@ -62,15 +81,6 @@
             font-size: 2.2em;
             max-width: 900px;
             font-weight: 400;
-            margin-bottom: 10px;
-        }
-
-        .hero-content p {
-            font-weight: 300;
-            font-size: 1.2em;
-            max-width: 800px;
-            margin: 0 auto;
-            color: #bdc3c7;
         }
 
         .container {
@@ -88,29 +98,17 @@
             border-radius: 4px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.1);
             border-top: 5px solid var(--accent);
-            transition: transform 0.3s ease;
         }
-
-        .card:hover { transform: translateY(-10px); }
 
         .card h3 {
             color: var(--primary);
             text-transform: uppercase;
             font-size: 1.1em;
-            margin-bottom: 20px;
             border-bottom: 1px solid #eee;
             padding-bottom: 10px;
             height: 50px;
             display: flex;
             align-items: center;
-        }
-
-        .price {
-            font-size: 1.4em;
-            color: var(--primary);
-            font-weight: 700;
-            display: block;
-            margin: 20px 0;
         }
 
         .btn {
@@ -121,22 +119,13 @@
             text-decoration: none;
             font-size: 0.85em;
             font-weight: bold;
-            letter-spacing: 1px;
-            transition: 0.3s;
             border-radius: 2px;
-            border: 1px solid var(--primary);
+            transition: 0.3s;
         }
 
-        .btn:hover {
-            background: var(--accent);
-            color: var(--primary);
-            border-color: var(--accent);
-        }
+        .btn:hover { background: var(--accent); color: var(--primary); }
 
-        .spanish-coach {
-            background: white;
-            padding: 80px 20px;
-        }
+        .spanish-coach { background: white; padding: 80px 20px; }
 
         .coach-grid {
             max-width: 1000px;
@@ -150,34 +139,25 @@
         .coach-img {
             flex: 1;
             min-width: 320px;
-            height: 450px;
-            background: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800');
+            height: 480px;
+            /* IMAGEN ACTUALIZADA: Ejecutivo moreno con barba, perfil senior */
+            background: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800');
             background-size: cover;
             background-position: center;
             border-radius: 4px;
-            box-shadow: 20px 20px 0px var(--bg), 20px 20px 0px 2px var(--accent);
+            box-shadow: 15px 15px 0px var(--accent);
         }
 
         .coach-text { flex: 1; text-align: left; min-width: 320px; }
 
-        footer {
-            background: var(--primary);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .footer-legal {
-            font-size: 0.8em;
-            color: #7f8c8d;
-            margin-top: 30px;
-            border-top: 1px solid #2c3e50;
-            padding-top: 20px;
-        }
-
+        footer { background: var(--primary); color: white; padding: 60px 20px; text-align: center; }
     </style>
 </head>
 <body>
+
+    <nav class="lang-bar">
+        <a href="#">ESPAÑOL</a> | <a href="#">ENGLISH</a>
+    </nav>
 
     <header>
         <h1>CONDE & CORONADO</h1>
@@ -186,31 +166,28 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h2>Expertise en Infraestructura TI para Sectores de Alta Criticidad.</h2>
-            <p>14 años asegurando la continuidad operativa en Banca, Hidroeléctricas, Telecomunicaciones y Manufactura de alto nivel.</p>
+            <h2>Infraestructura TI para Sectores de Alta Criticidad.</h2>
+            <p style="font-weight:300; color:#bdc3c7;">14 años asegurando la continuidad operativa en Banca, Energía y Manufactura.</p>
         </div>
     </section>
 
     <div class="container">
         <div class="card">
             <h3>Guías de Despliegue Operativo</h3>
-            <p>Manuales técnicos y checklists basados en estándares de alta disponibilidad para la apertura y gestión de sedes. Evite errores críticos de hardware y conectividad.</p>
-            <span class="price">Desde $19.00</span>
-            <a href="TU_LINK_LINKEDIN" class="btn">ADQUIRIR RECURSO</a>
+            <p>Manuales y checklists basados en estándares de alta disponibilidad para apertura de sedes.</p>
+            <a href="#" class="btn">VER RECURSOS</a>
         </div>
 
         <div class="card">
             <h3>Gestión de Activos y Control</h3>
-            <p>Estrategias para el control de licenciamiento, despliegue de software de gestión y automatización de mantenimiento preventivo y correctivo.</p>
-            <span class="price">Consultoría</span>
-            <a href="TU_LINK_LINKEDIN" class="btn">SOLICITAR INFO</a>
+            <p>Estrategias de licenciamiento y automatización de mantenimiento preventivo.</p>
+            <a href="#" class="btn">CONSULTORÍA</a>
         </div>
 
         <div class="card">
-            <h3>Análisis de Factibilidad TI</h3>
-            <p>Evaluación estratégica de su infraestructura actual para identificar cuellos de botella antes de escalar su operación. Diagnóstico preventivo profesional.</p>
-            <span class="price">Informe Preliminar</span>
-            <a href="mailto:tu-correo@ejemplo.com" class="btn">INICIAR DIAGNÓSTICO</a>
+            <h3>Factibilidad TI</h3>
+            <p>Evaluación estratégica de infraestructura para escalabilidad de operaciones.</p>
+            <a href="#" class="btn">DIAGNÓSTICO</a>
         </div>
     </div>
 
@@ -219,20 +196,17 @@
             <div class="coach-img"></div>
             <div class="coach-text">
                 <h2 style="font-family: 'Playfair Display', serif; color: var(--primary); font-size: 2.2em;">Technical Spanish Coaching</h2>
-                <p><strong>Clases de español naturalizado para profesionales de TI.</strong></p>
-                <p>Bridge the gap between your technical expertise and your Spanish-speaking team. Especializado en terminología corporativa y operativa para Managers y Tech Leads extranjeros.</p>
+                <p><strong>Professional Spanish for IT Leaders.</strong></p>
+                <p>Especializado en terminología corporativa y operativa para Managers y Tech Leads extranjeros que dirigen equipos en Latinoamérica.</p>
                 <br>
-                <a href="TU_LINK_LINKEDIN" class="btn" style="background: var(--accent); color: var(--primary); border-color: var(--accent);">RESERVAR SESIÓN / BOOK A SESSION</a>
+                <a href="#" class="btn" style="background: var(--accent); color: var(--primary);">BOOK A SESSION</a>
             </div>
         </div>
     </section>
 
     <footer>
         <p>CONDE & CORONADO | Excellence in IT Operations</p>
-        <div class="footer-legal">
-            &copy; 2026 CONDE & CORONADO. Todos los derechos reservados.<br>
-            Las guías y recursos ofrecidos son herramientas de referencia basadas en mejores prácticas y deben adaptarse a cada entorno específico por profesionales calificados.
-        </div>
+        <p style="font-size: 0.8em; color: #7f8c8d; margin-top: 20px;">&copy; 2026 Todos los derechos reservados.</p>
     </footer>
 
 </body>
