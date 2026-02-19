@@ -24,21 +24,26 @@
         /* BARRA DE IDIOMA */
         .lang-bar {
             background: #0d161f;
-            padding: 10px 5%;
+            padding: 12px 5%;
             text-align: right;
-            font-size: 0.75em;
-            letter-spacing: 1px;
+            font-size: 0.8em;
+            letter-spacing: 2px;
         }
 
-        .lang-bar span {
+        .lang-btn {
             color: white;
             cursor: pointer;
             margin-left: 15px;
             font-weight: 700;
             transition: 0.3s;
+            border: none;
+            background: none;
+            font-family: 'Montserrat', sans-serif;
+            outline: none;
         }
 
-        .lang-bar span:hover { color: var(--accent); }
+        .lang-btn:hover { color: var(--accent); }
+        .lang-btn.active { color: var(--accent); text-decoration: underline; }
 
         header {
             background: var(--primary);
@@ -61,6 +66,7 @@
             font-size: 0.9em;
             color: var(--accent);
             margin-top: 10px;
+            text-transform: uppercase;
         }
 
         .hero {
@@ -81,7 +87,7 @@
             max-width: 1100px;
             margin: -60px auto 50px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             padding: 0 20px;
         }
@@ -98,11 +104,11 @@
             color: var(--primary);
             text-transform: uppercase;
             font-size: 1.1em;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
-            height: 50px;
+            margin-bottom: 15px;
+            height: 45px;
             display: flex;
             align-items: center;
+            border-bottom: 1px solid #eee;
         }
 
         .btn {
@@ -115,8 +121,9 @@
             font-weight: bold;
             border-radius: 2px;
             transition: 0.3s;
-            cursor: pointer;
             border: none;
+            cursor: pointer;
+            margin-top: 10px;
         }
 
         .btn:hover { background: var(--accent); color: var(--primary); }
@@ -161,7 +168,8 @@
 <body>
 
     <nav class="lang-bar">
-        <span onclick="setLanguage('es')">ESPAÑOL</span> | <span onclick="setLanguage('en')">ENGLISH</span>
+        <button class="lang-btn" id="btn-es" onclick="changeLang('es')">ESPAÑOL</button> | 
+        <button class="lang-btn" id="btn-en" onclick="changeLang('en')">ENGLISH</button>
     </nav>
 
     <header>
@@ -171,28 +179,28 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h2 id="hero-title">Infraestructura TI para Sectores de Alta Criticidad.</h2>
-            <p id="hero-desc" style="font-weight:300; color:#bdc3c7; font-size: 1.2em;">14 años asegurando la continuidad operativa en Banca, Energía y Manufactura.</p>
+            <h2 id="h-title">Infraestructura TI para Sectores de Alta Criticidad.</h2>
+            <p id="h-desc" style="font-weight:300; color:#bdc3c7; font-size: 1.2em;">14 años asegurando la continuidad operativa en Banca, Energía y Manufactura.</p>
         </div>
     </section>
 
     <div class="container">
         <div class="card">
-            <h3 id="card1-title">Guías de Despliegue</h3>
-            <p id="card1-desc">Manuales técnicos basados en estándares de alta disponibilidad para la apertura de sedes.</p>
-            <a href="#" class="btn" id="card1-btn">VER RECURSOS</a>
+            <h3 id="c1-t">Guías de Despliegue</h3>
+            <p id="c1-d">Manuales técnicos basados en estándares de alta disponibilidad para la apertura de sedes.</p>
+            <button class="btn" id="c1-b">VER RECURSOS</button>
         </div>
 
         <div class="card">
-            <h3 id="card2-title">Gestión de Activos</h3>
-            <p id="card2-desc">Estrategias de licenciamiento y automatización de mantenimiento preventivo y correctivo.</p>
-            <a href="#" class="btn" id="card2-btn">CONSULTORÍA</a>
+            <h3 id="c2-t">Gestión de Activos</h3>
+            <p id="c2-d">Estrategias de licenciamiento y automatización de mantenimiento preventivo y correctivo.</p>
+            <button class="btn" id="c2-b">CONSULTORÍA</button>
         </div>
 
         <div class="card">
-            <h3 id="card3-title">Factibilidad TI</h3>
-            <p id="card3-desc">Evaluación estratégica de infraestructura para la escalabilidad de sus operaciones.</p>
-            <a href="#" class="btn" id="card3-btn">DIAGNÓSTICO</a>
+            <h3 id="c3-t">Factibilidad TI</h3>
+            <p id="c3-d">Evaluación estratégica de infraestructura para la escalabilidad de sus operaciones.</p>
+            <button class="btn" id="c3-b">DIAGNÓSTICO</button>
         </div>
     </div>
 
@@ -200,43 +208,5 @@
         <div class="coach-grid">
             <div class="coach-img"></div>
             <div class="coach-text">
-                <h2 id="coach-title" style="font-family: 'Playfair Display', serif; color: var(--primary); font-size: 2.2em;">Technical Spanish Coaching</h2>
-                <p><strong id="coach-subtitle">Professional Spanish for IT Leaders.</strong></p>
-                <p id="coach-desc">Domine el español naturalizado necesario para dirigir equipos de infraestructura en Latinoamérica con un enfoque bilingüe corporativo.</p>
-                <br>
-                <a href="#" class="btn" id="coach-btn" style="background: var(--accent); color: var(--primary);">BOOK A SESSION</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>CONDE & CORONADO | Excellence in IT Operations</p>
-        <div id="footer-text" class="footer-legal">
-            &copy; 2026 CONDE & CORONADO. Todos los derechos reservados.<br>
-            Las guías y recursos ofrecidos son herramientas de referencia basadas en mejores prácticas y deben adaptarse a cada entorno específico por profesionales calificados.
-        </div>
-    </footer>
-
-    <script>
-        const translations = {
-            es: {
-                subtitle: "ESTRATEGIA, INFRAESTRUCTURA & TECH COACHING",
-                heroTitle: "Infraestructura TI para Sectores de Alta Criticidad.",
-                heroDesc: "14 años asegurando la continuidad operativa en Banca, Energía y Manufactura.",
-                card1Title: "Guías de Despliegue",
-                card1Desc: "Manuales técnicos basados en estándares de alta disponibilidad para la apertura de sedes.",
-                card1Btn: "VER RECURSOS",
-                card2Title: "Gestión de Activos",
-                card2Desc: "Estrategias de licenciamiento y automatización de mantenimiento preventivo y correctivo.",
-                card2Btn: "CONSULTORÍA",
-                card3Title: "Factibilidad TI",
-                card3Desc: "Evaluación estratégica de infraestructura para la escalabilidad de sus operaciones.",
-                card3Btn: "DIAGNÓSTICO",
-                coachTitle: "Technical Spanish Coaching",
-                coachSubtitle: "Español Profesional para Líderes de TI.",
-                coachDesc: "Domine el español naturalizado necesario para dirigir equipos de infraestructura en Latinoamérica con un enfoque bilingüe corporativo.",
-                coachBtn: "RESERVAR SESIÓN",
-                footer: "&copy; 2026 CONDE & CORONADO. Todos los derechos reservados.<br>Las guías y recursos ofrecidos son herramientas de referencia basadas en mejores prácticas y deben adaptarse a cada entorno específico por profesionales calificados."
-            },
-            en: {
-                subtitle: "STRATEGY, INFRA
+                <h2 id="co-t" style="font-family: 'Playfair Display', serif; color: var(--primary); font-size: 2.2em;">Technical Spanish Coaching</h2>
+                <p><strong id="co-s">
